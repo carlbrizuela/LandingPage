@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Superscripts-Oswald", "Oswald", "Roboto Condensed", "Roboto", "Noto Sans TC", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", "Prompt", sans-serif;
+}
+
+.garmin-header, .empty{
+    display: none;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    background-color: gray;
+    position: sticky;
+    padding-inline: 10px;
+    /* padding-left and padding-right */
+    top: 0;
+    z-index: 1;
+}
+
+#header-img {
+    height: 30%;
+}
+
+#nav-bar{
+    display: flex;
+    gap: 22px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+
+.nav-link:hover{
+    background-color: white;
+    border-radius: 5px;
+}
+
+#about{
+    background-color: white;
+    position: relative;    
+}
+
+#about img{
+    width: 100%;
+}
+
+#about h2{
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    width: 25%;
+    font-size: 2.5em;
+}
+
+h2{
+    line-height: 1.25;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+}
+
+
+#transition img{
+    width:100%;
+}
+
+#features-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 25px;
+    min-height: 569px;
+}
+
+.features-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+}
+
+.features-content span{
+    padding-top: 20px;
+}
+
+.features-content img{
+    height: 75px;
+}
+
+#video-container{
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    overflow: hidden;
+}
+
+#video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#video-title{
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+}
+
+#buy-now{
+    background-color: white;
+    color: black;
+    padding-top: 50px;
+    text-align: center;
+}
+
+#choices{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    gap: 25px;
+    min-height: 569px;
+}
+
+#choices a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+a img{
+    height: 200px;
+}
+
+#subscribe{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    background-color: gray;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#email{
+    width:250px;
+    text-align: center;
+    padding: 2px;
+}
+
+@media only screen and (max-width: 767px) {
+   #nav-bar{
+        display: none;
+    }
+    .garmin-header, .empty{
+        display: block;
+    }
+    #features-container{
+        grid-template-columns: 1fr;
+    }
+
+    #choices{
+        grid-template-columns: 1fr;
+    }
+
+    #about h2{
+        font-size: 1em;
+    }
+}
